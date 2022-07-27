@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>AI Project</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='lighting.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='lighting.png') }}" class="icon" />
+  <h3>Translation</h3>
+  <form action="/" method="post">
+    <!-- <input type="text" name="animal" placeholder="Enter an English statement" required /> -->
+    <textarea name="animal" placeholder="Enter an English statement" required ></textarea>
+    <input type="submit" value="번역하기" />
+    <!-- <select id="list" title="연결하실 부서를 선택하세요.">
+      
+      <option value="1">감성분석</option>
+      <option value="2">번역</option>
+      <option value="3">챗봇</option>
+    </select> -->
+
+    
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
