@@ -10,15 +10,16 @@
 
 <body>
   <img src="{{ url_for('static', filename='lighting.png') }}" class="icon" />
-  <h3>Translation</h3>
-  <form action="/korean/" method="post">
+  <h3>Sentiment Classifier</h3>
+  <h4>Positive, Neutral, Negative</h4>
+  <form action="/sentiment/" method="post">
     <!-- <select name="list">
       <option value="1">영문=>한글</option>
       <option value="2">한글=>영문</option>
     </select> -->
     <!-- <input type="text" name="animal" placeholder="Enter an English statement" required /> -->
-    <textarea name="animal" placeholder="Enter an English statement" required ></textarea>
-    <input type="submit" value="번역하기" />
+    <textarea name="animal" placeholder="분석하고 싶은 문장을 적으시오." required ></textarea>
+    <input type="submit" value="감성분석" />
 
   </form>
   {% if result %}

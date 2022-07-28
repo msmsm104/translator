@@ -10,15 +10,15 @@
 
 <body>
   <img src="{{ url_for('static', filename='lighting.png') }}" class="icon" />
-  <h3>Translation</h3>
-  <form action="/korean/" method="post">
+  <h3>Movie to emoji</h3>
+  <form action="/movie/" method="post">
     <!-- <select name="list">
       <option value="1">영문=>한글</option>
       <option value="2">한글=>영문</option>
     </select> -->
     <!-- <input type="text" name="animal" placeholder="Enter an English statement" required /> -->
-    <textarea name="animal" placeholder="Enter an English statement" required ></textarea>
-    <input type="submit" value="번역하기" />
+    <textarea name="animal" placeholder="영화 제목(영어)을 적으세요." required ></textarea>
+    <input type="submit" value="Generate Emoji" />
 
   </form>
   {% if result %}
